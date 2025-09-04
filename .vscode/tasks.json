@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Build",
+      "type": "shell",
+      "command": "./scripts/build.sh",
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "detail": "Builds the dev and prod versions of the game."
+    },
+    {
+      "label": "Build & Run (Dev)",
+      "type": "shell",
+      "command": "/Applications/pico-8/pico-8.app/Contents/MacOS/pico8 -run build/dev/game-state-dev.p8",
+      "dependsOn": [
+        "Build"
+      ],
+      "problemMatcher": [],
+      "detail": "Builds the game and runs the dev version in PICO-8."
+    },
+    {
+      "label": "Build & Run (Prod)",
+      "type": "shell",
+      "command": "/Applications/pico-8/pico-8.app/Contents/MacOS/pico8 -run build/prod/game-state-prod.p8",
+      "dependsOn": [
+        "Build"
+      ],
+      "problemMatcher": [],
+      "detail": "Builds the game and runs the prod version in PICO-8."
+    }
+  ]
+}

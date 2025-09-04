@@ -1,0 +1,19 @@
+# Game loop functions
+# -------------------
+_init
+_update
+_draw
+
+
+# System names for debugging
+# --------------------------
+
+# CollisionSystem
+# ParticleSystem
+
+
+# Custom functions you want to preserve
+# -------------------------------------
+
+unpack
+
