@@ -44,6 +44,9 @@ function Player.new(opts)
     -- Player controls
     self:add_component(InputController.new(self))
 
+    -- Add collider
+    self:add_component(RotationRectangleCollider.new(self))
+
     return self
 end
 
